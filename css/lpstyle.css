@@ -1,0 +1,1393 @@
+@charset "utf-8";
+
+/*-------------------------------------*/
+/* reset                               */
+/*-------------------------------------*/
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+cod,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+filedset,
+img {
+    border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    font-style: normal;
+}
+
+pre,
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+
+/*-------------------------------------*/
+/*                                     */
+/* 全体                                */
+/*                                     */
+/*-------------------------------------*/
+body {
+    background: #FFF;
+    color: #333;
+    font-family:
+        'ヒラギノ角ゴ Pro W3',
+        'Hiragino Kaku Gothic Pro',
+        'メイリオ',
+        Meiryo,
+        'ＭＳ Ｐゴシック',
+        sans-serif;
+    font-size: 0.8em;
+}
+
+a {
+    color: #0070C0;
+    text-decoration: underline;
+}
+
+h2 {
+    color: white;
+    font-size: x-large;
+}
+
+h3 {
+
+    font-size: x-large;
+    width: 100%;
+    border-bottom: 4px solid #227FC5;
+    margin-bottom: 20px;
+}
+
+h3:before {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 27px;
+    /*画像の幅*/
+    height: 27px;
+    /*画像の高さ*/
+    background-image: url(../img/title_logo.png);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: -1px;
+}
+
+h4 {
+    color: #336699;
+    font-weight: normal;
+    font-size: 12px;
+    border-bottom: 6px double #336699;
+}
+
+h5 {
+    font-size: 11px;
+    font-weight: normal;
+    border-bottom: 2px solid yellow;
+}
+
+hr {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border: 0;
+    height: 1px;
+    background-image: none;
+    background-color: #7f7f7f;
+    display: block;
+    clear: both;
+}
+
+hr.point_dialog {
+    margin-bottom: 0.5em;
+}
+
+/* UL */
+ul {
+    margin-left: 1.5em;
+    font-size: 0.8em;
+
+}
+
+li {
+    margin-left: 10px;
+    font-size: 2.0em;
+}
+
+/* チェックボックス */
+input[type=checkbox] {
+    vertical-align: middle;
+    width: auto;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+}
+
+.checkbox label {
+    vertical-align: middle;
+    display: inline-block;
+    /*width: 90%;*/
+}
+
+/*1行テキスト*/
+input[type="text"] {
+    width: 90%;
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+textarea::-webkit-input-placeholder {
+    font-size: small;
+}
+
+textarea::-moz-placeholder {
+    font-size: small;
+}
+
+textarea::-moz-placeholder {
+    font-size: small;
+}
+
+textarea::-ms-input-placeholder {
+    font-size: small;
+}
+
+
+input[type="text"]:focus {
+    border-radius: 10px;
+    border: #000099 1px solid !important;
+    outline: 0 !important;
+    margin: 1px !important;
+    /*線を補足しているのでプラス*/
+}
+
+.mini_size input[type="text"] {
+    width: 35%;
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/* inputのラベル */
+.input label {
+    margin-top: 10px;
+    margin-right: 6px;
+    display: inline-block;
+}
+
+
+/*複数行テキスト*/
+textarea {
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+textarea:focus {
+    padding-left: 11px;
+    border-radius: 10px;
+    border: #000099 1px solid !important;
+    outline: 0 !important;
+    margin-top: 11px !important;
+    margin-bottom: 11px !important;
+
+}
+
+/*select*/
+select {
+    width: 90%;
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+select:focus {
+    border-radius: 10px;
+    border: #000099 1px solid !important;
+    outline: 0 !important;
+    margin: 1px !important;
+    /*線を補足しているのでプラス*/
+}
+
+
+.mini_size select {
+    width: 40%;
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/*ラジオボタン*/
+input[type="radio"] {
+    vertical-align: top;
+    margin-right: 3px;
+    height: 1.3em;
+    width: 1.3em;
+}
+
+.radio label {
+    vertical-align: middle;
+    display: inline-block;
+    text-align: left;
+    font-size: initial;
+    margin-bottom: 5px;
+}
+
+.radio label .small {
+    font-size: small;
+}
+
+
+
+/* ボタン */
+input[type="submit"] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px 30px;
+    background: black;
+    color: white;
+    display: inline-flex;
+}
+
+.submit {
+    display: block;
+    text-align: center;
+}
+
+/* chomeの予測変換後の色 */
+input:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input.required_color:-webkit-autofill,
+select.required_color:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fdd inset;
+}
+
+
+/*リンク*/
+a:hover img {
+    opacity: 0.7;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/*-------------------------------------*/
+/*                                     */
+/* 汎用クラス                          */
+/*                                     */
+/*-------------------------------------*/
+
+
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+tr.center td {
+    text-align: center;
+}
+
+pre {
+    background: #f5f5f5;
+    border-right: 2px solid #aaa;
+    border-bottom: 2px solid #aaa;
+    padding: 2em;
+}
+
+ul.able li {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+/* 共通用ulの横表示 */
+ul.yoko {
+    list-style: none;
+}
+
+ul.yoko li {
+    float: left;
+}
+
+/* float解除 */
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 非表示 */
+.disnon {
+    display: none !important;
+}
+
+.red {
+    color: red;
+}
+
+.light_blue {
+    color: #1096CB;
+}
+
+/*float解除*/
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*非表示*/
+.disnon {
+    display: none;
+     !important;
+}
+
+
+
+/*太文字*/
+.bold {
+    font-weight: bold;
+}
+
+/*リンクアイコン*/
+.target_blank:after {
+    content: '';
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-image: url(../../img/form/icon_target_blank.png);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+}
+
+/* 縦並び（携帯は横）*/
+ul.notice {
+    margin-left: 0em;
+}
+
+ul.notice li {
+    display: list-item;
+    list-style: none;
+}
+
+/* ※表示のul */
+ul.kome {
+    list-style-type: none;
+    margin-left: 1em;
+    /* マーカーを1文字寄せた分、ULにマージンを設定*/
+    text-align: left;
+}
+
+ul.kome li {
+    padding-bottom: 3px;
+}
+
+ul.kome li:before {
+    content: '※';
+    /* ←ここにリストマーカーにしたい文字列を設定 */
+    margin-left: -1em;
+    /* 1文字分、左に寄せる */
+
+}
+
+ul.kome .box1 {
+    display: inline;
+}
+
+/* ul 白丸 */
+ul.circle,
+ul li.circle {
+    list-style: circle;
+}
+
+
+
+
+
+/* リンクボタン */
+/* 青 */
+a.bule {
+    background: #1096CB;
+    color: white;
+    border: 1px solid #1096CB;
+    border-radius: 4px;
+    padding: 1px 8px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* 指 */
+input:not([type=text]):hover,
+select:hover,
+button:hover,
+.radio label,
+.checkbox label,
+.submit div,
+.zipcode_button {
+    cursor: pointer;
+    cursor: hand;
+}
+
+/* 飾りのない見出し */
+.caption {
+    font-size: x-large;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+/*-------------------------------------*/
+/*                                     */
+/*  スペース                     */
+/*                                     */
+/*-------------------------------------*/
+/* 下50px */
+.bottom50 {
+    margin-bottom: 50px;
+}
+
+
+/*左1em*/
+.left1em {
+    margin-left: 1em;
+}
+
+
+/*-------------------------------------*/
+/*                                     */
+/*  ヘッダー                     */
+/*                                     */
+/*-------------------------------------*/
+
+/* ヘッダー画像の上 */
+#header_logo_container {
+    border-top: 2px solid #1078C8;
+
+}
+
+.header_text {
+    display: inline-block;
+    font-size: x-large;
+    vertical-align: bottom;
+    border-bottom: 8px solid #F2911C;
+    vertical-align: middle;
+}
+
+.header_text.mini {
+    font-size: large;
+}
+
+/* ヘッダーロゴの枠 */
+#header_logo_frame {
+    text-align: left;
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    padding-top: 1em;
+    margin-top: 5px;
+
+}
+
+
+/* ヘッダータイトル */
+#header_title_container {
+    background: #169ECF;
+
+}
+
+#header_title_frame {
+    text-align: left;
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 10px;
+}
+
+/* 流れ */
+#sell_step_frame {
+    text-align: left;
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    padding-top: 1em;
+
+}
+
+#sell_step_content1 img {
+    width: 100%;
+
+}
+
+/*-------------------------------------*/
+/*                                     */
+/*  ヘッダー（タイアップ）            */
+/*                                     */
+/*-------------------------------------*/
+
+
+/* ヘッダータイトル */
+#campaign_title_container {
+    background: #FFEFD2;
+
+}
+
+#campaign_title_frame {
+    font-size: large;
+    text-align: center;
+    width: 950px;
+    padding: 10px 0px 10px 0px;
+    margin: auto;
+}
+
+
+/*-------------------------------------*/
+/*                                     */
+/*  page scroll ボタン                 */
+/*                                     */
+/*-------------------------------------*/
+/*隠し部分*/
+#hide_container {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#hide_content1 {
+    background: #fff;
+    clear: both;
+    color: #333;
+    min-height: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+/*-------------------------------------*/
+/*                                     */
+/*  page top (上へ戻る)                */
+/*                                     */
+/*-------------------------------------*/
+#page_top {
+    width: 6.5em;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    right: 0px;
+    bottom: 80px;
+    margin: 0em;
+    border-radius: 3px;
+    text-align: center;
+    padding-left: 20px;
+    margin-right: 10px;
+}
+
+#page_top a {
+    color: #fff;
+    display: block;
+    padding: 0.5em;
+    padding-right: 1em;
+    padding-left: 1em;
+    text-decoration: none;
+    text-align: right;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+#page_top a:link,
+#page_top a:visited {
+    background: url("../../img/icon/pagetop.png") no-repeat scroll 0.5em center rgba(0, 0, 0, 0.4);
+    color: #fff;
+    margin-left: -20px;
+}
+
+#page_top a:hover,
+#page_top a:active {
+    background: url("../../img/icon/pagetop.png") no-repeat scroll 0.5em center rgba(0, 0, 0, 0.7);
+    color: #f60;
+    margin-left: -20px;
+}
+
+
+/*-------------------------------------*/
+/*                                     */
+/*  page bottom (ページ末尾へ移動)     */
+/*                                     */
+/*-------------------------------------*/
+
+#page_bottom {
+    width: 6.5em;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    right: 0px;
+    bottom: 20px;
+    margin: 0em;
+    border-radius: 3px;
+    text-align: center;
+    padding-left: 20px;
+    margin-right: 10px;
+}
+
+#page_bottom a {
+    color: #fff;
+    display: block;
+    padding: 0.5em;
+    padding-right: 1em;
+    padding-left: 1em;
+    text-decoration: none;
+    text-align: right;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+}
+
+#page_bottom a:link,
+#page_bottom a:visited {
+    background: url("../../img/icon/pagebottom.png") no-repeat scroll 0.5em center rgba(0, 0, 0, 0.4);
+    color: #fff;
+    margin-left: -20px;
+}
+
+#page_bottom a:hover,
+#page_bottom a:active {
+    background: url("../../img/icon/pagebottom.png") no-repeat scroll 0.5em center rgba(0, 0, 0, 0.7);
+    color: #f60;
+    margin-left: -20px;
+}
+
+/*-------------------------------------*/
+/*                                     */
+/*  フッター                    */
+/*                                     */
+/*-------------------------------------*/
+
+#footer {
+    /*
+    margin-top: 60px;
+*/
+    margin-top: 0px;
+    text-align: left;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #343436;
+    object-fit: cover;
+    padding: 0px !important;
+
+}
+
+#footer_container #footer {
+    /*
+    padding-top: 35px !important;
+    padding-bottom: 38px !important;
+*/
+    padding-top: 5px !important;
+    padding-bottom: 28px !important;
+}
+
+#footer_frame {
+    clear: both;
+    padding: 5px 0px;
+    text-align: center;
+    color: #44617b;
+    background-image: none;
+    background-repeat: repeat-x;
+    color: white;
+    object-fit: cover;
+}
+
+
+#footer a.footer_link {
+    color: white !important;
+    font-size: 1.33em;
+}
+
+#footer a.footer_link:hover {
+    color: #eee !important;
+}
+
+#footer_frame .link {
+    background-image: url(../../img/form/f_bg-sp.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    /*
+    padding-bottom: 35px;
+*/
+    padding-bottom: 15px;
+}
+
+#footer_frame .copy {
+    /*
+    margin-top: 35px;
+*/
+    margin-top: 0px;
+}
+
+/* リンク */
+#footer_container a {
+    text-decoration: none;
+}
+
+#footer_container a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*-------------------------------------*/
+/*                                     */
+/*  タイアップ通知                     */
+/*                                     */
+/*-------------------------------------*/
+/* タイアップ通知 */
+#tie_up_notice_frame {
+    text-align: left;
+    width: 930px;
+    /* 左右10px小さくする*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    min-height: 150px;
+    /*高さ*/
+}
+
+
+
+/*タイアップ通知 マイスくん*/
+#tie_up_attetion_image {
+    float: left;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#tie_up_attetion_image img {
+    width: 150px;
+    /*画像の幅*/
+    height: 150px;
+    /*画像の高さ*/
+}
+
+/*内容*/
+#tie_up_attetion_message {
+    display: table-cell;
+    height: 150px;
+    /*メッセージの高さ 要注意*/
+    vertical-align: middle;
+
+    overflow: hidden;
+    margin: 10px;
+    padding: 15px;
+    background: white;
+    font-size: large;
+    border: 2px solid #1096CB;
+    border-radius: 10px;
+}
+
+/*-------------------------------------*/
+/*                                     */
+/*  確認事項                     */
+/*                                     */
+/*-------------------------------------*/
+/* 確認事項 */
+#sell_notice_frame {
+    text-align: left;
+    width: 930px;
+    /* 左右10px小さくする*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    /*padding-top  :  1em;*/
+}
+
+/*メッセージ*/
+#sell_notice_message {
+    font-size: large;
+    margin: 10px;
+
+}
+
+
+/*警告文*/
+#sell_attetion_message {
+    overflow: hidden;
+    margin: 10px;
+    padding: 15px;
+    background: #D9D9D9;
+    font-size: large;
+}
+
+
+/*-------------------------------------*/
+/*                                     */
+/*  お申込みフォーム                     */
+/*                                     */
+/*-------------------------------------*/
+/*お申込みフォームの全体*/
+#sell_list_frame {
+    text-align: left;
+    width: 930px;
+    /* 左右10px小さくする*/
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* プランの備考 */
+#plan_notice {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+/* プラン比較表 */
+.plan_button:hover {
+    opacity: 0.7;
+}
+
+
+/*必須*/
+.required .left label:first-child:after {
+    content: '';
+    /*何も入れない*/
+    display: inline-block;
+    /*忘れずに！*/
+    width: 44px;
+    /*画像の幅*/
+    height: 18px;
+    /*画像の高さ*/
+    background-image: url(../img/icon_required.png);
+    background-size: contain;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    margin-left: 20px;
+}
+
+/* 名前入力 */
+div.name {
+    display: inline;
+}
+
+
+/* 住所自動検索ボタン */
+.zipcode_button {
+    background: #1096CB;
+    color: white;
+    border: 1px solid #1096CB;
+    border-radius: 4px;
+    padding: 6px 8px;
+    display: inline-block;
+    width: 150px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+
+}
+
+.zipcode_button:hover {
+    opacity: 0.7;
+}
+
+.zipcode_button:active {
+    margin-top: 6px;
+    margin-left: 6px;
+}
+
+/*-------------------------------------*/
+/*                                     */
+/*  疑似テーブル表示  (ベース)         */
+/*                                     */
+/*-------------------------------------*/
+.table_custom {
+    display: table;
+    /* ブロックレベル要素をtableと同じように表示にする */
+    width: 98%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    /* 境界線の重複を解除 */
+    margin-top: -1px;
+}
+
+.table_custom .column {
+    display: table-cell;
+    /* ブロックレベル要素をtd(th)と同じように表示にする */
+    border-top: 1px solid #BFBFBF;
+    border-bottom: 1px solid #BFBFBF;
+}
+
+/* 2カラム用 */
+.table_custom .left.column {
+    width: 40%;
+    vertical-align: middle;
+    background: #EEF5FB;
+    padding: 10px;
+}
+
+.table_custom .right.column {
+    width: 60%;
+    word-wrap: break-word;
+    background: white;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+/* 3カラム用 */
+.table_custom.three_column .left.column {
+    width: 20%;
+    vertical-align: middle;
+    background: #EEF5FB;
+    padding: 10px;
+}
+
+.table_custom.three_column .middle.column {
+    width: 50%;
+    word-wrap: break-word;
+    background: white;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.table_custom.three_column .right.column {
+    width: 30%;
+    word-wrap: break-word;
+    background: white;
+    padding: 10px;
+    vertical-align: middle;
+    font-size: 0.9em;
+}
+
+
+/*-------------------------------------*/
+/*                                     */
+/*  疑似テーブル表示  (追加)         */
+/*                                     */
+/*-------------------------------------*/
+
+.table_custom {
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.table_custom .left {
+    font-weight: bold;
+
+}
+
+
+/*-------------------------------------*/
+/*                                     */
+/*  疑似テーブル表示  (ロゴ)         */
+/*                                     */
+/*-------------------------------------*/
+
+.table_custom.logo .left {
+    width: 30%;
+
+}
+
+.table_custom.logo .column {
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+/* 2カラム用 */
+.table_custom.logo .left.column {
+    width: 25%;
+    vertical-align: middle;
+    background: white;
+    padding: 0px;
+}
+
+.table_custom.logo .right.column {
+    width: 75%;
+    vertical-align: middle;
+    background: white;
+    padding: 0px;
+}
+
+
+/*-------------------------------------*/
+/*                                     */
+/* カード表示           */
+/*                                     */
+/*-------------------------------------*/
+.card_mini {
+    display: inline-block;
+}
+
+.card_mini img {
+    height: 23px;
+    display: inline-block;
+    margin-bottom: -7px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+
+.right.column .card_mini {
+    margin-left: 10px;
+
+}
+
+/*-------------------------------------*/
+/*                                     */
+/* よくある質問ボタン           */
+/*                                     */
+/*-------------------------------------*/
+
+.qa_button {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #1095cb;
+    color: #fff;
+    border-style: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.9em;
+    cursor: pointer
+}
+
+.qa:hover {
+    text-decoration: none;
+    opacity: 0.7
+}
+
+/*-------------------------------------*/
+/*                                     */
+/* よくある質問ボタン           */
+/*                                     */
+/*-------------------------------------*/
+
+.end_button {
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #101010;
+    color: #fff;
+    border-style: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.3em;
+    cursor: pointer
+}
+
+.end:hover {
+    text-decoration: none;
+    opacity: 0.7
+}
+/*-------------------------------------*/
+/*                                     */
+/* 口座依頼書ボタン           */
+/*                                     */
+/*-------------------------------------*/
+
+.kouza_button {
+    width: 360px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #045cac;
+    color: #fff;
+    border-style: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.9em;
+    cursor: pointer
+}
+
+.kouza_button:hover {
+    text-decoration: none;
+    opacity: 0.7
+}
+
+
+/*-------------------------------------*/
+/*                                     */
+/* 利用規約           */
+/*                                     */
+/*-------------------------------------*/
+#agreement_message_frame {
+    margin-top: 50px;
+    padding: 20px 20px 10px;
+    width: 70%;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+
+#agreement_sample {
+    width: 100%;
+}
+
+/*余白*/
+#agreement_sample div,
+#agreement_message {
+    margin: 5px;
+    text-align: left;
+}
+
+
+#agreement_sample ul {
+    display: inline-block;
+}
+
+#agreement_sample li {
+    margin: 10px;
+    font-size: large;
+}
+
+#agreement_purpose {
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+}
+
+#agreement_purpose > span {
+    font-size: 1rem;
+}
+
+#agreement_purpose > ul {
+    list-style-type: disc;
+    margin-left: 40px;
+}
+
+#agreement_check {
+    width: 90%;
+    max-width: 220px;
+    border: 4px solid #EE3333;
+    display: inline-flex;
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
+    border-radius: 0.5em;
+}
+
+#agreement_check label {
+    margin-left: 1em;
+}
+
+#agreement_check > .checkbox {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.required_color {
+    background-color: #fdd !important;
+}
+
+/* 同意チェックボックス */
+input[type=checkbox] {
+    vertical-align: middle;
+    display: inline-block;
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
+    cursor: pointer;
+}
+
+.required.checkbox {
+    width: 100%;
+}
+
+.checkbox label {
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/*-------------------------------------*/
+/*                                     */
+/* お申込みボタン           */
+/*                                     */
+/*-------------------------------------*/
+input[type="submit"],
+submit.div {
+    font-size: x-large;
+    -webkit-appearance: none;
+}
+
+input[type="submit"]:hover,
+.submit button:hover {
+    opacity: 0.7;
+}
+
+.submit#dummy div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    /* margin-right: auto; */
+    border: 2px solid #D3D1D0;
+    border-radius: 10px;
+    padding: 10px 30px;
+    background: #D3D1D0;
+    color: black;
+    display: inline-flex;
+    font-size: x-large;
+}
+
+.submit button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    /* margin-right: auto; */
+    border: 2px solid #BFBFBF;
+    border-radius: 10px;
+    padding: 10px 30px;
+    background: #BFBFBF;
+    color: black;
+    display: inline-flex;
+    font-size: x-large;
+    margin-right: 30px;
+}
+
+#sp_plan {
+    height: 100px;
+    width: 100%;
+    overflow: hidden
+}
+
+#sp_plan_btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 60px
+}
+
+#sp_plan_btn.static {
+    position: static;
+    width: 90%
+}
+
+#sp_plan_btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 60px
+}
+
+#sp_plan_btn.static {
+    position: static;
+    width: 90%
+}
+
+.contact .contact_box .box {
+    text-align: center
+}
+
+.contact .contact_box .box > p {
+    font-size: 2.14rem;
+    line-height: 1.4
+}
+
+.contact .contact_box .box {
+    margin-bottom: 35px
+}
+
+.contact .contact_box .box {
+    margin-bottom: 20px
+}
+
+.contact .contact_box .box > p {
+    font-size: 1.6rem
+}

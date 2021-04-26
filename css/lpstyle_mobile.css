@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+@media only screen and (max-width : 1024px) {
+
+    /*-------------------------------------*/
+    /*                                     */
+    /*  全体                */
+    /*                                     */
+    /*-------------------------------------*/
+    body {
+        font-size: 16px;
+        /* スマホ対応 */
+    }
+
+    /*全体*/
+    #header_logo_container,
+    #header_title_container,
+    #sell_step_container,
+    #sell_notice_container,
+    #sell_list_container,
+    #campaign_title_container {
+        width: 100%;
+    }
+
+    /*表示枠*/
+    #header_logo_frame,
+    #header_title_frame,
+    #tie_up_notice_frame,
+    #sell_step_frame,
+    #sell_notice_frame,
+    #sell_list_frame,
+    #campaign_title_frame {
+        width: 98%;
+    }
+
+    #sell_notice_frame,
+    #sell_list_frame {
+        width: 95%;
+    }
+
+    #header_logo_frame {
+        padding-top: 0;
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
+
+    #header_title_container h2 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+
+    /*ラジオボタン*/
+    .radio label {
+        font-size: small;
+        max-width: 100%;
+
+    }
+
+    #campaign_title_frame {
+        font-size: medium;
+    }
+
+
+    /*-------------------------------------*/
+    /*                                     */
+    /* 汎用クラス                          */
+    /*                                     */
+    /*-------------------------------------*/
+    /*左1em*/
+    .left1em {
+        margin-left: 0.5em;
+    }
+
+    /*追加BR*/
+    .after_br:after {
+        content: "\A";
+        white-space: pre;
+    }
+
+    .before_br:before {
+        content: "\A";
+        white-space: pre;
+    }
+
+
+    /* 縦並び（携帯は横）*/
+    ul.notice li {
+        display: inline;
+        list-style: none;
+        margin-right: 0.5em;
+    }
+
+    /*-------------------------------------*/
+    /*                                     */
+    /*  タイアップ通知                     */
+    /*                                     */
+    /*-------------------------------------*/
+    /*タイアップ通知 マイスくん*/
+    #tie_up_attetion_image {
+        float: none;
+        text-align: center;
+        margin: auto;
+        display: block;
+    }
+
+    /*内容*/
+    #tie_up_attetion_message {
+        height: auto;
+        font-size: small;
+    }
+
+    /*-------------------------------------*/
+    /*                                     */
+    /*  確認事項                     */
+    /*                                     */
+    /*-------------------------------------*/
+    /*メッセージ*/
+    #sell_notice_message {
+        font-size: small;
+    }
+
+    /*警告文*/
+    #sell_attetion_message {
+        font-size: small;
+    }
+
+
+
+
+    /* フッター */
+    #footer_container {
+        font-size: small;
+    }
+
+    /*-------------------------------------*/
+    /*                                     */
+    /*  page scroll ボタン                 */
+    /*                                     */
+    /*-------------------------------------*/
+    #hide_content1 {
+        display: none;
+    }
+
+    /*-------------------------------------*/
+    /*                                     */
+    /*  お申込みフォーム                   */
+    /*                                     */
+    /*-------------------------------------*/
+    select#plan {
+        font-size: small;
+    }
+
+    #plan_notice {
+        border: solid 1px;
+        padding: 5px;
+        font-size: x-small;
+        border-radius: 10px;
+    }
+
+    .name.mini_size input[type="text"] {
+        width: 80%;
+        display: inline-block;
+    }
+
+    .name div {
+        display: list-item;
+        list-style: none;
+        margin: 3px;
+    }
+
+    /*-------------------------------------*/
+    /*                                     */
+    /*  疑似テーブル表示  (ベース)         */
+    /*                                     */
+    /*-------------------------------------*/
+    .table_custom {
+        display: inline-block;
+        margin: 5px;
+        width: 98%;
+    }
+
+    .table_custom .column {
+        display: inline-block;
+        border: none;
+    }
+
+    .table_custom .left.column {
+        width: 90%;
+        border-radius: 5px;
+    }
+
+    .table_custom .right.column {
+        width: 90%;
+    }
+
+
+    .three_column.table_custom .left.column {
+        width: 90%;
+        border-radius: 5px;
+    }
+
+    .three_column.table_custom .middle.column {
+        width: 90%;
+    }
+
+    .three_column.table_custom .right.column {
+        width: 90%;
+        font-size: small;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .three_column.table_custom .right.column label:before {
+        content: '※';
+    }
+
+    /*-------------------------------------*/
+    /*                                     */
+    /*  疑似テーブル表示  (ロゴ)         */
+    /*                                     */
+    /*-------------------------------------*/
+    .table_custom.logo .right.column {
+        width: 100%;
+    }
+
+    .header_text {
+        font-size: large;
+    }
+
+    /*-------------------------------------*/
+    /*                                     */
+    /* 利用規約           */
+    /*                                     */
+    /*-------------------------------------*/
+    #agreement_message_frame {
+        width: 90%;
+        padding: 10px;
+    }
+
+    #agreement_purpose {
+        width: 90%;
+        margin: 0px auto;
+        padding: 10px;
+    }
+
+    #agreement_purpose > ul {
+        margin-left: 20px;
+    }
+
+    /*-------------------------------------*/
+    /*                                     */
+    /* カード表示           */
+    /*                                     */
+    /*-------------------------------------*/
+    .card_mini {
+        margin-bottom: 10px;
+    }
+}
